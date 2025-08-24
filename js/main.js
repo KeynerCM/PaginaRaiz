@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (filter === 'all') {
                         card.style.display = 'flex';
                     } else {
-                        if (card.getAttribute('data-category') === filter) {
+                        if (card.getAttribute('data-category') && card.getAttribute('data-category').includes(filter)) {
                             card.style.display = 'flex';
                         } else {
                             card.style.display = 'none';
