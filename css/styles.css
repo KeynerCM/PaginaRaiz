@@ -14,13 +14,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-primary);
     color: var(--color-dark);
     line-height: 1.6;
-    overflow-x: hidden;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -476,6 +488,7 @@ footer {
         justify-content: center;
     }
     
+    /* Reajustar banner para dispositivos móviles */
     .page-banner {
         flex-direction: column;
         text-align: center;
@@ -487,19 +500,23 @@ footer {
         max-width: 100%;
         padding: 1rem 5%;
         margin-bottom: 1rem;
+        flex: none;
     }
     
     .banner-image {
         width: 100%;
         padding: 0 5%;
         text-align: center;
+        flex: none;
+        padding-right: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
+    /* Mejorar el menú móvil */
     .nav-links {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 80px;
         left: 0;
         width: 100%;
@@ -508,6 +525,7 @@ footer {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         align-items: center;
+        z-index: 1000;
     }
     
     .nav-links.active {
@@ -515,11 +533,20 @@ footer {
     }
     
     .nav-links li {
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;
+        margin-left: 0;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
     }
     
     .mobile-menu {
         display: block;
+        z-index: 1001;
     }
     
     h1 {
@@ -569,23 +596,28 @@ footer {
 @media screen and (max-width: 576px) {
     .hero h1 {
         font-size: 2.5rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero h2 {
         font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
     
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
+        margin-top: 1.5rem;
     }
     
     .btn {
         width: 100%;
+        padding: 0.7rem 1.5rem;
     }
     
     .values-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .about {
@@ -602,6 +634,7 @@ footer {
     
     .page-banner h1 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
     
     .page-banner p {
@@ -609,19 +642,39 @@ footer {
     }
     
     .banner-image img {
-        max-height: 200px;
+        max-height: 180px;
     }
     
     .container {
+        width: 92%;
         padding: 1.5rem 0;
     }
     
     .header-container {
-        padding: 0.8rem 5%;
+        padding: 0.8rem 4%;
     }
     
     .logo img {
-        height: 50px;
+        height: 45px;
+    }
+    
+    /* Arreglar problema de superposición */
+    .hero-image img, .about-image img, .banner-image img {
+        max-width: 92%;
+        margin: 0 auto;
+    }
+    
+    .about-text p, .hero .slogan {
+        font-size: 0.95rem;
+    }
+    
+    /* Mejorar los espaciados generales */
+    section {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
     }
 }
 

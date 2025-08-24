@@ -133,6 +133,7 @@
 .proposals-header .section-title {
     margin-right: 2rem;
     flex: 1;
+    min-width: 200px;
 }
 
 .proposals-header-image {
@@ -146,61 +147,105 @@
 @media screen and (max-width: 992px) {
     .proposals-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .proposals-header {
         flex-direction: column;
         text-align: center;
+        margin-bottom: 2rem;
     }
     
     .proposals-header .section-title {
         margin-right: 0;
         margin-bottom: 1.5rem;
     }
+    
+    .proposals-header-image {
+        max-width: 250px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .proposals {
+        padding: 3rem 0 2rem;
+    }
+    
     .proposals-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .proposals-filters {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2rem;
     }
     
     .filter-btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         margin-bottom: 0.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
     
     .proposal-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.2rem;
     }
     
     .proposal-icon {
         margin-bottom: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .proposal-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .proposal-content {
+        padding: 1.2rem;
+    }
+    
+    .proposal-summary {
+        font-size: 0.95rem;
     }
 }
 
 @media screen and (max-width: 576px) {
     .proposals {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     
     .proposals-header-image {
-        max-width: 100%;
-        margin-top: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
     }
     
     .proposal-card {
-        padding: 1rem;
+        margin: 0 auto;
+        max-width: 95%;
     }
     
     .proposal-content {
         padding: 1rem;
+    }
+    
+    .proposal-details h4 {
+        font-size: 1rem;
+    }
+    
+    .proposal-details ul {
+        padding-left: 1.2rem;
+    }
+    
+    .proposal-details li {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
     }
 }

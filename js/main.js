@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     
     // Menú móvil mejorado
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function() {
+    if (mobileMenuButton && navLinks) {
+        mobileMenuButton.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevenir que el clic se propague al documento
             navLinks.classList.toggle('active');
             // Cambiar el icono según el estado
             const icon = this.querySelector('i');
@@ -73,25 +74,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Tabs para áreas estratégicas
-    const areaTabs = document.querySelectorAll('.area-tab');
-    const areaContents = document.querySelectorAll('.area-content');
+    // Filtros de áreas estratégicas
+    const areaFilterButtons = document.querySelectorAll('.area-filter-btn');
+    const areaCards = document.querySelectorAll('.area-card');
     
-    if (areaTabs.length > 0) {
-        areaTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Quitar clase active de todos los tabs
-                areaTabs.forEach(t => t.classList.remove('active'));
-                // Añadir clase active al tab clickeado
+    if (areaFilterButtons.length > 0) {
+        areaFilterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Quitar clase active de todos los botones
+                areaFilterButtons.forEach(btn => btn.classList.remove('active'));
+                // Añadir clase active al botón clickeado
                 this.classList.add('active');
                 
-                const area = this.getAttribute('data-area');
+                const filter = this.getAttribute('data-filter');
                 
-                // Mostrar el contenido correspondiente
-                areaContents.forEach(content => {
-                    content.classList.remove('active');
-                    if (content.id === area) {
-                        content.classList.add('active');
+                // Filtrar las tarjetas
+                areaCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'flex';
+                    } else {
+                        if (card.getAttribute('data-category') === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
                     }
                 });
             });

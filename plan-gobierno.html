@@ -64,68 +64,86 @@
 
     <section class="plan-areas">
         <div class="container">
-            <h2 class="section-title">Áreas Estratégicas</h2>
-            <div class="area-image">
-                <img src="variacion2.png" alt="Estrategias RAÍZ">
+            <div class="areas-header">
+                <h2 class="section-title">Áreas Estratégicas</h2>
+                <img src="variacion2.png" alt="Estrategias RAÍZ" class="areas-header-image">
             </div>
-            <div class="areas-container">
-                <div class="area-tab-container">
-                    <div class="area-tabs">
-                        <button class="area-tab active" data-area="geopolitico">Geopolítico</button>
-                        <button class="area-tab" data-area="cultural">Cultural</button>
-                        <button class="area-tab" data-area="deportivo">Deportivo</button>
-                        <button class="area-tab" data-area="ambiental">Ambiental</button>
-                        <button class="area-tab" data-area="transparencia">Transparencia</button>
-                        <button class="area-tab" data-area="movimiento">Movimiento Estudiantil</button>
-                        <button class="area-tab" data-area="inclusion">Inclusión</button>
-                        <button class="area-tab" data-area="bienestar">Bienestar Estudiantil</button>
-                        <button class="area-tab" data-area="territorial">Campus y Centros</button>
-                    </div>
-                </div>
+            <div class="areas-filters">
+                <button class="area-filter-btn active" data-filter="all">Todas</button>
+                <button class="area-filter-btn" data-filter="geopolitico">Geopolítico</button>
+                <button class="area-filter-btn" data-filter="cultural">Cultural</button>
+                <button class="area-filter-btn" data-filter="deportivo">Deportivo</button>
+                <button class="area-filter-btn" data-filter="ambiental">Ambiental</button>
+                <button class="area-filter-btn" data-filter="transparencia">Transparencia</button>
+                <button class="area-filter-btn" data-filter="movimiento">Movimiento Estudiantil</button>
+                <button class="area-filter-btn" data-filter="inclusion">Inclusión</button>
+                <button class="area-filter-btn" data-filter="bienestar">Bienestar Estudiantil</button>
+                <button class="area-filter-btn" data-filter="territorial">Campus y Centros</button>
+            </div>
 
-                <div class="area-content-container">
-                    <!-- Geopolítico -->
-                    <div class="area-content active" id="geopolitico">
+            <div class="areas-grid">
+                <!-- Geopolítico -->
+                <div class="area-card" data-category="geopolitico">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
                         <h3>Enfoque Geopolítico</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
                             <p>La globalización ya venía fracturada desde los últimos 35 años, pero esa fractura se profundizó aún más en 2008 con la explosión de la burbuja inmobiliaria. En 2022 se materializa la crisis euroasiática, confirmando que la globalización ha muerto definitivamente y con ella, la forma en que se pensó el mundo durante los últimos 30 años.</p>
-                            <p>Desde la FEITEC, tenemos que asumir la responsabilidad histórica que nos corresponde. Estamos en un momento crítico para el país, y si no hacemos algo ahora, el futuro de nuestra nación será profundamente incierto. Los únicos que pueden tomar el liderazgo somos nosotros, los estudiantes, y por eso es nuestra responsabilidad cambiar la visión país.</p>
+                            <p>Desde la FEITEC, tenemos que asumir la responsabilidad histórica que nos corresponde. Estamos en un momento crítico para el país, y si no hacemos algo ahora, el futuro de nuestra nación será profundamente incierto.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
                             <ul>
-                                <li><strong>Construcción de un Plan País Educativo</strong> desde el ejercicio de poder: Operación Ratio Omega para intervenir la educación, impulsar una estrategia nacional que proyecte a Costa Rica hacia los próximos 50 años.</li>
-                                <li><strong>Reorientación productiva y tecnológica:</strong> Fomentar la inversión en tecnología, infraestructura y desarrollo industrial propio. El país debe dejar la prioridad de ser un país exportador de servicios y convertirse en un actor capaz de competir en la nueva economía global.</li>
-                                <li><strong>Transformación profunda del TEC y de la FEITEC:</strong> Convertir nuestras instituciones en los motores reales de Costa Rica, centros de pensamiento, innovación y desarrollo intelectual ante los desafíos de un mundo en transformación.</li>
+                                <li><strong>Construcción de un Plan País Educativo</strong> desde el ejercicio de poder: Operación Ratio Omega para intervenir la educación.</li>
+                                <li><strong>Reorientación productiva y tecnológica:</strong> Fomentar la inversión en tecnología, infraestructura y desarrollo industrial propio.</li>
+                                <li><strong>Transformación profunda del TEC y de la FEITEC:</strong> Convertir nuestras instituciones en los motores reales de Costa Rica.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Cultural -->
-                    <div class="area-content" id="cultural">
+                <!-- Cultural -->
+                <div class="area-card" data-category="cultural">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
                         <h3>Enfoque Cultural</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
-                            <p>La cultura universitaria ha sido históricamente marginada dentro de la estructura institucional, tratándose como un complemento y no como un eje transversal del desarrollo integral de la comunidad estudiantil. Los grupos culturales, artísticos y patrimoniales sobreviven gracias a la autogestión, al esfuerzo voluntario de sus integrantes y al amor por las expresiones que representan.</p>
-                            <p>Desde nuestro gobierno, entendemos que la cultura no es un adorno ni un entretenimiento secundario, es una herramienta fundamental de cohesión social, construcción de identidad y transformación activa de la realidad. La cultura debe ser reconocida como un pilar estratégico para formar estudiantes íntegros, críticos y comprometidos con su comunidad.</p>
+                            <p>La cultura universitaria ha sido históricamente marginada dentro de la estructura institucional, tratándose como un complemento y no como un eje transversal del desarrollo integral de la comunidad estudiantil.</p>
+                            <p>Desde nuestro gobierno, entendemos que la cultura no es un adorno ni un entretenimiento secundario, es una herramienta fundamental de cohesión social, construcción de identidad y transformación activa de la realidad.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
                             <ul>
-                                <li><strong>Posicionar a los grupos culturales</strong> como pilares de la identidad universitaria mediante campañas institucionales periódicas.</li>
-                                <li><strong>Construir agendas culturales anuales descentralizadas</strong> en cada sede en coordinación con gobiernos locales y comunidades.</li>
+                                <li><strong>Posicionar a los grupos culturales</strong> como pilares de la identidad universitaria mediante campañas institucionales.</li>
+                                <li><strong>Construir agendas culturales anuales descentralizadas</strong> en cada sede en coordinación con gobiernos locales.</li>
                                 <li><strong>Fomentar giras culturales y actividades públicas</strong> con participación estudiantil activa.</li>
                                 <li><strong>Integrar actividades culturales</strong> como parte estructural de la formación estudiantil.</li>
                                 <li><strong>Consolidar políticas culturales universitarias</strong> como marco de acción permanente.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Deportivo -->
-                    <div class="area-content" id="deportivo">
+                <!-- Deportivo -->
+                <div class="area-card" data-category="deportivo">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
                         <h3>Enfoque Deportivo</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
                             <p>La estructura deportiva institucional se encuentra limitada por una visión centralizada, una distribución desigual de recursos entre sedes, y una ausencia de una política clara que reconozca el deporte como un eje transversal en la formación integral del estudiantado.</p>
-                            <p>Nuestro compromiso es devolverle al deporte universitario su lugar como herramienta clave para el bienestar físico y mental, la formación de liderazgos, el fortalecimiento de la identidad institucional y la conexión activa con las comunidades locales.</p>
+                            <p>Nuestro compromiso es devolverle al deporte universitario su lugar como herramienta clave para el bienestar físico y mental.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -133,18 +151,25 @@
                                 <li><strong>Creación de Comités Deportivos</strong> en todas las sedes con representación estudiantil activa.</li>
                                 <li><strong>Diagnóstico nacional de infraestructura deportiva</strong> y priorización de inversión.</li>
                                 <li><strong>Promoción de programas de actividad física regular</strong>, inclusiva y comunitaria.</li>
-                                <li><strong>Fortalecimiento de torneos internos</strong>, entre sedes y de un Festival Nacional Deportivo de la FEITEC.</li>
+                                <li><strong>Fortalecimiento de torneos internos</strong>, entre sedes y de un Festival Nacional Deportivo.</li>
                                 <li><strong>Impulso de proyectos deportivos estudiantiles</strong> con enfoque social y comunitario.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Ambiental -->
-                    <div class="area-content" id="ambiental">
+                <!-- Ambiental -->
+                <div class="area-card" data-category="ambiental">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
                         <h3>Enfoque Ambiental</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
                             <p>Aunque el Tecnológico de Costa Rica ha sido históricamente un referente en sostenibilidad ambiental, muchos de sus esfuerzos han sido aislados, concentrados en la sede central, y sin una integración real a la vida estudiantil ni a las dinámicas locales de las sedes regionales.</p>
-                            <p>Nuestro compromiso es impulsar una transformación ambiental integral, descentralizada y participativa, donde cada sede del Tecnológico se convierta en un agente de sostenibilidad territorial, liderado por la comunidad estudiantil en alianza con los gobiernos locales, instituciones públicas y organizaciones comunitarias.</p>
+                            <p>Nuestro compromiso es impulsar una transformación ambiental integral, descentralizada y participativa.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -152,18 +177,25 @@
                                 <li><strong>Creación de Comités Ambientales por sede</strong> con liderazgo estudiantil.</li>
                                 <li><strong>Desarrollo de Planes Ambientales regionales</strong> en articulación con políticas locales y nacionales.</li>
                                 <li><strong>Alianzas estratégicas</strong> con gobiernos locales, instituciones públicas y ONGs.</li>
-                                <li><strong>Apoyo financiero y técnico</strong> a proyectos ambientales estudiantiles a través del Fondo Verde Estudiantil.</li>
+                                <li><strong>Apoyo financiero y técnico</strong> a proyectos ambientales estudiantiles.</li>
                                 <li><strong>Organización anual de Ferias Ambientales</strong> en cada sede del TEC.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Transparencia -->
-                    <div class="area-content" id="transparencia">
+                <!-- Transparencia -->
+                <div class="area-card" data-category="transparencia">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
                         <h3>Transparencia y Comunicación</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
-                            <p>La Federación de Estudiantes no solo debe administrar recursos y representar al estudiantado, debe ser un ejemplo permanente de transparencia, rendición de cuentas y comunicación clara. En un contexto donde la desconfianza hacia las estructuras estudiantiles ha crecido, es urgente recuperar la legitimidad a través de una gestión honesta, abierta y profundamente participativa.</p>
-                            <p>Visualizamos una Federación donde cada estudiante tenga acceso real, claro y constante a toda la información sobre su representación, donde los recursos se administren con responsabilidad y donde la comunicación sea directa, efectiva y cercana.</p>
+                            <p>La Federación de Estudiantes no solo debe administrar recursos y representar al estudiantado, debe ser un ejemplo permanente de transparencia, rendición de cuentas y comunicación clara.</p>
+                            <p>Visualizamos una Federación donde cada estudiante tenga acceso real, claro y constante a toda la información sobre su representación, donde los recursos se administren con responsabilidad.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -176,13 +208,20 @@
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Movimiento Estudiantil -->
-                    <div class="area-content" id="movimiento">
+                <!-- Movimiento Estudiantil -->
+                <div class="area-card" data-category="movimiento">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
                         <h3>Movimiento Estudiantil</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
                             <p>El Movimiento Estudiantil no es solo una estructura organizativa, es la fuerza política viva del estudiantado. Es la herramienta que permite a los estudiantes incidir en las decisiones, defender sus derechos y transformar la realidad social e institucional.</p>
-                            <p>Visualizamos un Movimiento Estudiantil fuerte, consciente y estratégico, que no se limite a reaccionar ante las crisis, sino que sea protagonista constante en la construcción de un TEC más democrático, una educación pública más sólida y un país más justo.</p>
+                            <p>Visualizamos un Movimiento Estudiantil fuerte, consciente y estratégico, que sea protagonista constante en la construcción de un TEC más democrático.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -190,17 +229,24 @@
                                 <li><strong>Fortalecimiento y acompañamiento permanente</strong> a Asociaciones Estudiantiles y Tribunales.</li>
                                 <li><strong>Impulso de procesos de formación política estudiantil</strong> descentralizados y participativos.</li>
                                 <li><strong>Promoción de liderazgos colectivos</strong>, conscientes y comprometidos con el bien común.</li>
-                                <li><strong>Fomento de la movilización estratégica e informada</strong> en defensa de derechos estudiantiles y la educación pública.</li>
+                                <li><strong>Fomento de la movilización estratégica e informada</strong> en defensa de derechos estudiantiles.</li>
                                 <li><strong>Reivindicación activa de la historia del Movimiento Estudiantil</strong> como fuente de identidad y motivación.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Inclusión -->
-                    <div class="area-content" id="inclusion">
+                <!-- Inclusión -->
+                <div class="area-card" data-category="inclusion">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
                         <h3>Inclusión para la Diversidad</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
-                            <p>La comunidad LGBTIQ+ dentro del Tecnológico de Costa Rica sigue enfrentando múltiples barreras estructurales, simbólicas y sociales que afectan su permanencia, bienestar y participación plena en la vida universitaria. La discriminación, la invisibilización, el acoso y la falta de políticas claras de protección continúan normalizadas en distintos espacios académicos y administrativos.</p>
+                            <p>La comunidad LGBTIQ+ dentro del Tecnológico de Costa Rica sigue enfrentando múltiples barreras estructurales, simbólicas y sociales que afectan su permanencia, bienestar y participación plena en la vida universitaria.</p>
                             <p>Nuestro compromiso es construir una universidad donde ser quien se es no implique un riesgo, una carga ni un obstáculo, sino que sea motivo de orgullo, dignidad y garantía plena de derechos.</p>
                         </div>
                         <div class="area-strategies">
@@ -214,13 +260,20 @@
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Bienestar Estudiantil -->
-                    <div class="area-content" id="bienestar">
+                <!-- Bienestar Estudiantil -->
+                <div class="area-card" data-category="bienestar">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
                         <h3>Bienestar Estudiantil</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
-                            <p>Una educación de calidad no puede existir sin condiciones de vida dignas que permitan sostenerla. El bienestar estudiantil no es un complemento, es una necesidad estructural que define la permanencia, el rendimiento y la participación real del estudiantado dentro del Tecnológico de Costa Rica.</p>
-                            <p>Desde la FEITEC, asumimos el compromiso de impulsar un modelo de bienestar estudiantil integral, accesible, descentralizado y con enfoque preventivo y territorial, que atienda a las personas en su complejidad y que esté centrado en la dignidad humana, no solo en estadísticas o formularios.</p>
+                            <p>Una educación de calidad no puede existir sin condiciones de vida dignas que permitan sostenerla. El bienestar estudiantil no es un complemento, es una necesidad estructural que define la permanencia, el rendimiento y la participación real del estudiantado.</p>
+                            <p>Desde la FEITEC, asumimos el compromiso de impulsar un modelo de bienestar estudiantil integral, accesible, descentralizado y con enfoque preventivo y territorial.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -233,13 +286,20 @@
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Campus y Centros Académicos -->
-                    <div class="area-content" id="territorial">
+                <!-- Campus y Centros Académicos -->
+                <div class="area-card" data-category="territorial">
+                    <div class="area-header">
+                        <div class="area-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
                         <h3>Campus Tecnológicos y Centros Académicos</h3>
+                    </div>
+                    <div class="area-content">
                         <div class="area-description">
-                            <p>El Tecnológico de Costa Rica está presente en distintos territorios del país, pero ese alcance geográfico no siempre se ha traducido en condiciones justas ni en una atención equitativa. Las sedes regionales y los centros académicos han sido históricamente marginados en la toma de decisiones, en la asignación de recursos y en el desarrollo de su infraestructura.</p>
-                            <p>Nuestro compromiso es trabajar por una presencia más justa, articulada y sólida en cada campus y centro académico, asegurando que todas las personas estudiantes —sin importar su ubicación— tengan acceso a condiciones dignas, apoyo real y oportunidades de desarrollo equivalentes.</p>
+                            <p>El Tecnológico de Costa Rica está presente en distintos territorios del país, pero ese alcance geográfico no siempre se ha traducido en condiciones justas ni en una atención equitativa.</p>
+                            <p>Nuestro compromiso es trabajar por una presencia más justa, articulada y sólida en cada campus y centro académico, asegurando que todas las personas estudiantes tengan acceso a condiciones dignas.</p>
                         </div>
                         <div class="area-strategies">
                             <h4>Estrategias principales:</h4>
@@ -247,7 +307,7 @@
                                 <li><strong>Impulso a la descentralización efectiva</strong> de políticas y recursos institucionales.</li>
                                 <li><strong>Fortalecimiento de estructuras organizativas locales</strong> en cada sede y centro académico.</li>
                                 <li><strong>Creación del Comité Ejecutivo Regional (CER) de Alajuela</strong> para garantizar representación estudiantil formal.</li>
-                                <li><strong>Fortalecimiento de servicios básicos</strong> (salud, bienestar, transporte, alimentación, infraestructura) en cada sede.</li>
+                                <li><strong>Fortalecimiento de servicios básicos</strong> en cada sede.</li>
                                 <li><strong>Impulso de actividades culturales, deportivas y académicas propias</strong> adaptadas a cada realidad territorial.</li>
                             </ul>
                         </div>
