@@ -1,2 +1,0 @@
-# PaginaRaiz
-Pagina partido raiz
