@@ -1,0 +1,139 @@
+/* Estilos específicos para la página de propuestas */
+
+/* Header de la sección */
+.proposals-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.proposals-header-image {
+    max-width: 100%;
+    max-height: 250px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Filtros de propuestas */
+.proposals {
+    padding: 5rem 0;
+}
+
+.proposals-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color-light);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Tarjetas de propuestas */
+.proposals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.proposal-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.proposal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-header {
+    padding: 1.5rem;
+    background-color: rgba(58, 102, 71, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.proposal-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.proposal-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+.proposal-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proposal-summary {
+    font-style: italic;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+}
+
+.proposal-details h4 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.proposal-details ul {
+    padding-left: 1.5rem;
+}
+
+.proposal-details li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .proposals-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .proposals-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
