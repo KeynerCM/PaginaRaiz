@@ -3,9 +3,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
     
+    // Menú móvil mejorado
     if (mobileMenuButton) {
         mobileMenuButton.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            // Cambiar el icono según el estado
+            const icon = this.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Cerrar el menú al hacer clic en un enlace
+        const menuLinks = document.querySelectorAll('.nav-links a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Cerrar el menú al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navLinks.contains(event.target);
+            const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnMenuButton && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     }
     

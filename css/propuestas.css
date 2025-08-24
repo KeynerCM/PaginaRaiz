@@ -121,7 +121,44 @@
     margin-bottom: 0.5rem;
 }
 
+/* Nuevos estilos para la imagen del encabezado de propuestas */
+.proposals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.proposals-header .section-title {
+    margin-right: 2rem;
+    flex: 1;
+}
+
+.proposals-header-image {
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive */
+@media screen and (max-width: 992px) {
+    .proposals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .proposals-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .proposals-header .section-title {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .proposals-container {
         grid-template-columns: 1fr;
@@ -135,5 +172,35 @@
     .filter-btn {
         width: 100%;
         max-width: 300px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .proposal-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .proposal-icon {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .proposals {
+        padding: 3rem 0;
+    }
+    
+    .proposals-header-image {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .proposal-card {
+        padding: 1rem;
+    }
+    
+    .proposal-content {
+        padding: 1rem;
     }
 }

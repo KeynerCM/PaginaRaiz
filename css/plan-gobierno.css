@@ -215,10 +215,35 @@
     .intro-image {
         order: -1;
         margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .intro-image img {
+        max-width: 80%;
+    }
+    
+    .area-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .area-image {
+        margin-bottom: 1.5rem;
+    }
+    
+    .area-image img {
+        max-height: 250px;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .plan-introduction {
+        padding: 3rem 0;
+    }
+    
+    .plan-areas {
+        padding: 3rem 0;
+    }
+    
     .timeline-container::before {
         left: 30px;
     }
@@ -245,5 +270,46 @@
     .area-tab {
         width: 100%;
         text-align: center;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        padding: 0.7rem 1rem;
+    }
+    
+    .area-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .area-image img {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .area-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .area-description p {
+        font-size: 0.95rem;
+    }
+    
+    .area-strategies h4 {
+        font-size: 1.1rem;
+    }
+    
+    .area-image img {
+        max-height: 150px;
     }
 }
