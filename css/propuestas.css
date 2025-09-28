@@ -10,8 +10,6 @@
     max-width: 100%;
     max-height: 250px;
     margin-top: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Filtros de propuestas */
@@ -121,7 +119,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* Nuevos estilos para la imagen del encabezado de propuestas */
+
 .proposals-header {
     display: flex;
     justify-content: space-between;
@@ -139,8 +137,6 @@
 .proposals-header-image {
     max-width: 300px;
     max-height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */
