@@ -738,6 +738,23 @@ footer {
     .section-title {
         margin-bottom: 2rem;
     }
+    
+    /* Footer responsive - centrar en tablets */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-logo,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -763,6 +780,27 @@ footer {
     
     .banner-image img {
         max-height: 150px;
+    }
+    
+    /* Footer responsive - centrar contenido en móviles */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-logo,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
     }
 }
 
